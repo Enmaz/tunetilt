@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04D7D73120B15DC6006E3803 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D7D73020B15DC6006E3803 /* GameKit.framework */; };
 		DDCD987620AA946300B8D4D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD987520AA946300B8D4D2 /* AppDelegate.swift */; };
 		DDCD987820AA946300B8D4D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD987720AA946300B8D4D2 /* ViewController.swift */; };
 		DDCD987B20AA946300B8D4D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDCD987920AA946300B8D4D2 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04D7D73020B15DC6006E3803 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		DDCD987220AA946300B8D4D2 /* tunetilt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tunetilt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDCD987520AA946300B8D4D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDCD987720AA946300B8D4D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +33,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D7D73120B15DC6006E3803 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04D7D72D20B15C65006E3803 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04D7D73020B15DC6006E3803 /* GameKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DDCD986920AA946300B8D4D2 = {
 			isa = PBXGroup;
 			children = (
 				DDCD987420AA946300B8D4D2 /* tunetilt */,
 				DDCD987320AA946300B8D4D2 /* Products */,
+				04D7D72D20B15C65006E3803 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,11 +119,20 @@
 				TargetAttributes = {
 					DDCD987120AA946300B8D4D2 = {
 						CreatedOnToolsVersion = 9.3.1;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter.iOS = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
 			buildConfigurationList = DDCD986D20AA946300B8D4D2 /* Build configuration list for PBXProject "tunetilt" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -282,8 +303,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -293,13 +313,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2A9AZU9A2Y;
+				DEVELOPMENT_TEAM = 6WJ364GSR7;
 				INFOPLIST_FILE = tunetilt/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.blinking-light-studios.tunetilt";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blinking-light-studios.tunetilt2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -311,13 +328,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2A9AZU9A2Y;
+				DEVELOPMENT_TEAM = 6WJ364GSR7;
 				INFOPLIST_FILE = tunetilt/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.blinking-light-studios.tunetilt";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blinking-light-studios.tunetilt2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
