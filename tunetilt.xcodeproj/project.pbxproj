@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04836AD920BAABDF00CD2311 /* LeaderboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04836AD820BAABDF00CD2311 /* LeaderboardController.swift */; };
+		04836ADF20BAB20F00CD2311 /* LeaderboardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04836ADE20BAB20F00CD2311 /* LeaderboardRow.swift */; };
+		04AD4D4D20BCDFE300F406D9 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD4D4C20BCDFE300F406D9 /* Score.swift */; };
 		04D7D73120B15DC6006E3803 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D7D73020B15DC6006E3803 /* GameKit.framework */; };
+		DCE5D4A920BA41F200CAC42A /* TuneTilt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCE5D4A720BA41F200CAC42A /* TuneTilt.xcdatamodeld */; };
 		DDCD987620AA946300B8D4D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD987520AA946300B8D4D2 /* AppDelegate.swift */; };
 		DDCD987820AA946300B8D4D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD987720AA946300B8D4D2 /* ViewController.swift */; };
 		DDCD987B20AA946300B8D4D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDCD987920AA946300B8D4D2 /* Main.storyboard */; };
@@ -17,7 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04836AD820BAABDF00CD2311 /* LeaderboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardController.swift; sourceTree = "<group>"; };
+		04836ADE20BAB20F00CD2311 /* LeaderboardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardRow.swift; sourceTree = "<group>"; };
+		04AD4D4C20BCDFE300F406D9 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		04D7D73020B15DC6006E3803 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		DCE5D4A820BA41F200CAC42A /* TuneTilt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TuneTilt.xcdatamodel; sourceTree = "<group>"; };
 		DDCD987220AA946300B8D4D2 /* tunetilt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tunetilt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDCD987520AA946300B8D4D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDCD987720AA946300B8D4D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +78,7 @@
 			children = (
 				DDCD988720AA955E00B8D4D2 /* controller */,
 				DDCD987520AA946300B8D4D2 /* AppDelegate.swift */,
+				DCE5D4A720BA41F200CAC42A /* TuneTilt.xcdatamodeld */,
 				DDCD987920AA946300B8D4D2 /* Main.storyboard */,
 				DDCD987C20AA946400B8D4D2 /* Assets.xcassets */,
 				DDCD987E20AA946400B8D4D2 /* LaunchScreen.storyboard */,
@@ -83,6 +92,9 @@
 			children = (
 				DDCD988820AA959900B8D4D2 /* GameController.swift */,
 				DDCD987720AA946300B8D4D2 /* ViewController.swift */,
+				04836AD820BAABDF00CD2311 /* LeaderboardController.swift */,
+				04836ADE20BAB20F00CD2311 /* LeaderboardRow.swift */,
+				04AD4D4C20BCDFE300F406D9 /* Score.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -121,6 +133,9 @@
 						CreatedOnToolsVersion = 9.3.1;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
 							com.apple.GameCenter.iOS = {
 								enabled = 1;
 							};
@@ -167,8 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04AD4D4D20BCDFE300F406D9 /* Score.swift in Sources */,
+				04836AD920BAABDF00CD2311 /* LeaderboardController.swift in Sources */,
 				DDCD987820AA946300B8D4D2 /* ViewController.swift in Sources */,
+				04836ADF20BAB20F00CD2311 /* LeaderboardRow.swift in Sources */,
 				DDCD988920AA959900B8D4D2 /* GameController.swift in Sources */,
+				DCE5D4A920BA41F200CAC42A /* TuneTilt.xcdatamodeld in Sources */,
 				DDCD987620AA946300B8D4D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +334,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6WJ364GSR7;
 				INFOPLIST_FILE = tunetilt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.blinking-light-studios.tunetilt2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -330,6 +350,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6WJ364GSR7;
 				INFOPLIST_FILE = tunetilt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.blinking-light-studios.tunetilt2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -360,6 +381,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DCE5D4A720BA41F200CAC42A /* TuneTilt.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DCE5D4A820BA41F200CAC42A /* TuneTilt.xcdatamodel */,
+			);
+			currentVersion = DCE5D4A820BA41F200CAC42A /* TuneTilt.xcdatamodel */;
+			path = TuneTilt.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DDCD986A20AA946300B8D4D2 /* Project object */;
 }
